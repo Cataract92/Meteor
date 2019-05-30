@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Assets.Scripts;
 using GoogleARCore.Examples.Common;
 using GoogleARCore.Examples.HelloAR;
 using UnityEditor;
@@ -57,6 +58,8 @@ public class Map: MonoBehaviour
             line.SetActive(false);
         }
         
+        FindObjectOfType<ConnectionManager>().Connect();
+
     }
 
     public void SaveMap()
